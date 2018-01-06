@@ -19,7 +19,7 @@ import org.jebtk.modern.ColorTheme;
 import org.jebtk.modern.graphics.icons.ModernApplicationIcon;
 
 public class GeneInfoIcon extends ModernApplicationIcon {
-	public GeneInfoIcon() {
-		super("G", "i", ColorTheme.GREEN);
-	}
+  public GeneInfoIcon() {
+    super("G", "i", ColorTheme.GREEN);
+  }
 }

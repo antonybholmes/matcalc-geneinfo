@@ -11,54 +11,50 @@ import org.jebtk.modern.window.ModernWindow;
 import edu.columbia.rdf.matcalc.toolbox.ColumnsCombo;
 
 public class GeneInfoDialog extends ModernDialogTaskWindow {
-	private static final long serialVersionUID = 1L;
-	
-	private DataFrame mMatrix;
+  private static final long serialVersionUID = 1L;
 
-	private ModernComboBox mColumnsCombo;
+  private DataFrame mMatrix;
 
+  private ModernComboBox mColumnsCombo;
 
-	public GeneInfoDialog(ModernWindow parent, DataFrame matrix) {
-		super(parent);
-		
-		setTitle("Gene Info");
-		
-		mMatrix = matrix;
-		
-		setup();
+  public GeneInfoDialog(ModernWindow parent, DataFrame matrix) {
+    super(parent);
 
-		createUi();
-	}
+    setTitle("Gene Info");
 
-	private void setup() {
-		setSize(600, 200);
-		
-		UI.centerWindowToScreen(this);
-	}
-	
-	
+    mMatrix = matrix;
 
-	private final void createUi() {
-		//this.getContentPane().add(new JLabel("Change " + getProductDetails().getProductName() + " settings", JLabel.LEFT), BorderLayout.PAGE_START);
-		
-		int[] rows = {ModernWidget.WIDGET_HEIGHT};
-		int[] cols = {100, 400};
-		
-		MatrixPanel panel = new MatrixPanel(rows, 
-				cols, 
-				ModernWidget.PADDING, 
-				ModernWidget.PADDING);
-		
-		panel.add(new ModernAutoSizeLabel("Column"));
-		
-		mColumnsCombo = new ColumnsCombo(mMatrix);
-		panel.add(mColumnsCombo);
-		
-		setDialogCardContent(panel);
+    setup();
 
-	}
-	
-	public int getColumnIndex() {
-		return mColumnsCombo.getSelectedIndex();
-	}
+    createUi();
+  }
+
+  private void setup() {
+    setSize(600, 200);
+
+    UI.centerWindowToScreen(this);
+  }
+
+  private final void createUi() {
+    // this.getContentPane().add(new JLabel("Change " +
+    // getProductDetails().getProductName() + " settings", JLabel.LEFT),
+    // BorderLayout.PAGE_START);
+
+    int[] rows = { ModernWidget.WIDGET_HEIGHT };
+    int[] cols = { 100, 400 };
+
+    MatrixPanel panel = new MatrixPanel(rows, cols, ModernWidget.PADDING, ModernWidget.PADDING);
+
+    panel.add(new ModernAutoSizeLabel("Column"));
+
+    mColumnsCombo = new ColumnsCombo(mMatrix);
+    panel.add(mColumnsCombo);
+
+    setDialogCardContent(panel);
+
+  }
+
+  public int getColumnIndex() {
+    return mColumnsCombo.getSelectedIndex();
+  }
 }

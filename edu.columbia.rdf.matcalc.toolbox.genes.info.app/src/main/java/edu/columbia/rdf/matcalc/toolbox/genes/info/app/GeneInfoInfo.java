@@ -31,22 +31,18 @@ import org.jebtk.core.AppVersion;
 import org.jebtk.modern.UIService;
 import org.jebtk.modern.help.GuiAppInfo;
 
-
 /**
  * The class GenesInfo.
  */
 public class GeneInfoInfo extends GuiAppInfo {
 
-	/**
-	 * Instantiates a new genes info.
-	 */
-	public GeneInfoInfo() {
-		super("Gene Info",
-				new AppVersion(1),
-				"Copyright (C) 2015-${year} Antony Holmes",
-				UIService.getInstance().loadIcon(GeneInfoIcon.class, 32),
-				UIService.getInstance().loadIcon(GeneInfoIcon.class, 128),
-				"Add gene descriptions.");
-	}
+  /**
+   * Instantiates a new genes info.
+   */
+  public GeneInfoInfo() {
+    super("Gene Info", new AppVersion(1), "Copyright (C) 2015-${year} Antony Holmes",
+        UIService.getInstance().loadIcon(GeneInfoIcon.class, 32),
+        UIService.getInstance().loadIcon(GeneInfoIcon.class, 128), "Add gene descriptions.");
+  }
 
 }
