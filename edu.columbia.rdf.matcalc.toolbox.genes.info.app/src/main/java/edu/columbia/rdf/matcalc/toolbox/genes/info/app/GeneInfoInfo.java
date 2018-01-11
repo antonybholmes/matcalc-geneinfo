@@ -40,9 +40,11 @@ public class GeneInfoInfo extends GuiAppInfo {
    * Instantiates a new genes info.
    */
   public GeneInfoInfo() {
-    super("Gene Info", new AppVersion(1), "Copyright (C) 2015-${year} Antony Holmes",
+    super("Gene Info", new AppVersion(1),
+        "Copyright (C) 2015-${year} Antony Holmes",
         UIService.getInstance().loadIcon(GeneInfoIcon.class, 32),
-        UIService.getInstance().loadIcon(GeneInfoIcon.class, 128), "Add gene descriptions.");
+        UIService.getInstance().loadIcon(GeneInfoIcon.class, 128),
+        "Add gene descriptions.");
   }
 
 }

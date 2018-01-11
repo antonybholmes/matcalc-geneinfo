@@ -8,6 +8,7 @@ import org.jebtk.modern.panel.MatrixPanel;
 import org.jebtk.modern.text.ModernAutoSizeLabel;
 import org.jebtk.modern.widget.ModernWidget;
 import org.jebtk.modern.window.ModernWindow;
+
 import edu.columbia.rdf.matcalc.toolbox.ColumnsCombo;
 
 public class GeneInfoDialog extends ModernDialogTaskWindow {
@@ -43,7 +44,8 @@ public class GeneInfoDialog extends ModernDialogTaskWindow {
     int[] rows = { ModernWidget.WIDGET_HEIGHT };
     int[] cols = { 100, 400 };
 
-    MatrixPanel panel = new MatrixPanel(rows, cols, ModernWidget.PADDING, ModernWidget.PADDING);
+    MatrixPanel panel = new MatrixPanel(rows, cols, ModernWidget.PADDING,
+        ModernWidget.PADDING);
 
     panel.add(new ModernAutoSizeLabel("Column"));
 
