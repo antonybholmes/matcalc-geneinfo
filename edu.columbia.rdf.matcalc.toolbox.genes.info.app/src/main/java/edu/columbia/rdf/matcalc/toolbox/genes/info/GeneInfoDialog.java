@@ -52,7 +52,7 @@ public class GeneInfoDialog extends ModernDialogTaskWindow {
     mColumnsCombo = new ColumnsCombo(mMatrix);
     panel.add(mColumnsCombo);
 
-    setDialogCardContent(panel);
+    setCard(panel);
 
   }
 
