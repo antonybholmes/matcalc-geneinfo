@@ -19,7 +19,7 @@ import org.jebtk.core.text.Parser;
 import org.jebtk.core.text.Splitter;
 import org.jebtk.core.text.TextUtils;
 import org.jebtk.math.matrix.DataFrame;
-import org.jebtk.modern.UIService;
+import org.jebtk.modern.AssetService;
 import org.jebtk.modern.dialog.ModernDialogStatus;
 import org.jebtk.modern.event.ModernClickEvent;
 import org.jebtk.modern.event.ModernClickListener;
@@ -50,7 +50,7 @@ public class GeneInfoModule extends CalcModule implements ModernClickListener {
     mWindow = window;
 
     RibbonLargeButton button = new RibbonLargeButton("Gene Info",
-        UIService.getInstance().loadIcon("gene_info", 24));
+        AssetService.getInstance().loadIcon("gene_info", 24));
 
     button.addClickListener(this);
     mWindow.getRibbon().getToolbar("Genomic").getSection("Annotation")
