@@ -26,9 +26,9 @@ import org.jebtk.modern.event.ModernClickListener;
 import org.jebtk.modern.ribbon.RibbonLargeButton;
 
 import edu.columbia.rdf.matcalc.MainMatCalcWindow;
-import edu.columbia.rdf.matcalc.toolbox.CalcModule;
+import edu.columbia.rdf.matcalc.toolbox.Module;
 
-public class GeneInfoModule extends CalcModule implements ModernClickListener {
+public class GeneInfoModule extends Module implements ModernClickListener {
 
   public static final Path RES_DIR = PathUtils.getPath("res/modules/geneinfo/");
 
@@ -133,7 +133,7 @@ public class GeneInfoModule extends CalcModule implements ModernClickListener {
       }
     }
 
-    mWindow.addToHistory("Gene Info", ml);
+    mWindow.history().addToHistory("Gene Info", ml);
   }
 
   private static void loadFile(Path file,
