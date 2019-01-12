@@ -107,13 +107,13 @@ public class GeneInfoModule extends Module implements ModernClickListener {
     ml.setColumnName(m.getCols() + 2, "Start");
     ml.setColumnName(m.getCols() + 3, "End");
 
-    List<String> names = m.getRowAnnotationNames();
+    List<String> names = m.getIndex().getNames();
 
     for (int i = 0; i < m.getRows(); ++i) {
       String id;
 
       if (column < names.size()) {
-        id = m.getRowAnnotationText(names.get(column), i);
+        id = m.getIndex().getText(names.get(column), i);
       } else {
         id = m.getText(i, column - names.size());
       }
