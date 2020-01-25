@@ -28,7 +28,6 @@
 package edu.columbia.rdf.matcalc.toolbox.genes.info.app;
 
 import org.jebtk.core.AppVersion;
-import org.jebtk.modern.AssetService;
 import org.jebtk.modern.help.GuiAppInfo;
 
 /**
@@ -42,8 +41,7 @@ public class GeneInfoInfo extends GuiAppInfo {
   public GeneInfoInfo() {
     super("Gene Info", new AppVersion(1),
         "Copyright (C) 2015-${year} Antony Holmes",
-        AssetService.getInstance().loadIcon(GeneInfoIcon.class, 32),
-        AssetService.getInstance().loadIcon(GeneInfoIcon.class, 128),
+        new GeneInfoIcon(),
         "Add gene descriptions.");
   }
 
